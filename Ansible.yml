@@ -1,0 +1,8 @@
+---
+- hosts: web_server
+  become: true
+  tasks:
+   - name: deploy files
+     copy:
+       src: /root/jenkins_artifacts/
+       dest: /var/www/html/php/
